@@ -45,7 +45,7 @@ def threshold_binary_img(image):
     if image is None:
         print("No loaded image.")
         return None
-    
+    image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
     image=cv2.resize(image,(400,250))
 
     _,th=cv2.threshold(image,180,255,cv2.THRESH_BINARY)
